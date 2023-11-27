@@ -1,0 +1,28 @@
+# Memory
+4 Key Terms
+
+- Bit
+    - Short for binary digit, a bit is fundamental unit of information in Computer Science that represents a state with one of two values, typically 0 and 1.
+    - Any data stored in computer is, at the most basic level, represented in bits.
+
+- Byte
+    - A group of eight bits. For example, 01101000 is a byte.
+    - Single byte can represent up to 256 data values (2^8).
+    - Since a binary number is expressed with only two symbols, like 0 and 1, a byte can effectively represent all off the numbers between 0 and 255,
+    inclusive, in binary format.
+
+- Fixed-Width Integer
+    - An integer represented by a fixed amount of "bits". For example, 1 32-bit integer is an integer represented by 32bits (4bytes),
+    and a 64-bit integer is an integer represented by 64 bits(8 bytes).
+    - Regardless of how large an integer is, its fixed-width-integer representation is, by definition, made up of a constant number of bits.
+    - It follows that, regardless of how large an integer is, an operation performed on its fixed-width-integer representation consist
+    of a constant number of bit manipulations, since the integer is made up of a fixed number of bits.
+
+- Memory
+    - Broadly speaking, memory is the foundational layer of computing, where all data is stored.
+    - In the context of coding interviews, it's important to note the following points:
+        * Data stored in memory is stored in bytes and, by extension, bits.
+        * Bytes in memory can "point" to other bytes in memory, so to store references to other data.
+        * The amount of memory that a machine has is bounded, making it valuable to limit how much memory an algorithm takes up.
+        * Accessing a byte or a fixed number of bytes (like 4 bytes or 8 bytes in the case of 32-bit and 645-bit integers) is
+        an elementary operation, which can be loosely treated as a single unit of operational work.
