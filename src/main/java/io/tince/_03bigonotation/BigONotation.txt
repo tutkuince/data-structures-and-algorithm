@@ -1,0 +1,29 @@
+# Big O Notation
+
+- Time Complexity
+    - A measure of how fast an algorithm runs, time complexity is a central concept in the field of algorithms
+    and in coding interviews.
+        - It is expressed using Big O notation.
+- Space Complexity
+    - A measure of how much auxiliary memory an algorithm takes up, space complexity is a central concept in the field
+    of algorithms and in coding interviews.
+        - It is expressed using Big O notation
+
+- Big O Notation
+    - The notation used to describe the time complexity and space complexity of algorithms.
+    - Variables used in Big O notation denote the sizes of inputs of algorithms. For example, O(n) might be the time complexity
+    of an algorithm that traverses through an array of length n; similarly, O(n + m) might be the time complexity of an algorithm
+    that traverses through an array of length n and through a string of length m.
+
+    - The following are examples of common complexities and their Big O notations, ordered from fastest to slowest:
+        - Constant: O(1)
+        - Logarithmic: O(log(n))
+        - Linear: O(n)
+        - Log-linear: O(log(n))
+        - Quadratic: O(n^2)
+        - Cubic: O(n^3)
+        - Exponential: O(2^n)
+        - Factorial: O(n!)
+
+    Note that in the context of coding interviews, Big O notation is usually understood to describe the worst-case complexity
+    of an algorithm, even though the worst-case complexity might differ from the average-case complexity.
