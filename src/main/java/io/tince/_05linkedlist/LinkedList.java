@@ -5,6 +5,17 @@ public class LinkedList {
     private Node tail;
     private int length;
 
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (this.length == 0) {
+            this.head = newNode;
+        } else {
+            tail.next = newNode;
+        }
+        this.tail = newNode;
+        this.length++;
+    }
+
     public void getHead() {
         String result = "Head: ";
         printResult(this.head, result);
