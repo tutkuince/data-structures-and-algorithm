@@ -16,6 +16,12 @@ public class LinkedList {
         this.length++;
     }
 
+    public void makeEmpty() {
+        this.tail = null;
+        this.head = null;
+        this.length = 0;
+    }
+
     public void getHead() {
         String result = "Head: ";
         printResult(this.head, result);
