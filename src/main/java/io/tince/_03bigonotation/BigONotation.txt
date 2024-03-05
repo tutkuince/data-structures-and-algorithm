@@ -26,4 +26,4 @@
         - Factorial: O(n!)
 
     Note that in the context of coding interviews, Big O notation is usually understood to describe the worst-case complexity
-    of an algorithm, even though the worst-case complexity might differ from the average-case complexity.
+    of an algorithm, even though t  he worst-case complexity might differ from the average-case complexity.
