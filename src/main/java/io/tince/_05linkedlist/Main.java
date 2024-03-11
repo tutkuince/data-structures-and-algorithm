@@ -72,7 +72,7 @@ public class Main {
         myLinkedList.printList();*/
 
         // Remove(index)
-        LinkedList myLinkedList = new LinkedList(11);
+        /*LinkedList myLinkedList = new LinkedList(11);
         myLinkedList.append(3);
         myLinkedList.append(23);
         myLinkedList.append(7);
@@ -80,6 +80,17 @@ public class Main {
         myLinkedList.printList();
         System.out.println("After Remove");
         myLinkedList.remove(2);
+        myLinkedList.printList();*/
+
+        // Reverse()
+        LinkedList myLinkedList = new LinkedList(11);
+        myLinkedList.append(3);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
+        System.out.println("Before Reverse");
+        myLinkedList.printList();
+        System.out.println("After Reverse");
+        myLinkedList.reverse();
         myLinkedList.printList();
     }
 }
