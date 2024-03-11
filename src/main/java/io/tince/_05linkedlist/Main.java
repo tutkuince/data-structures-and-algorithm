@@ -43,11 +43,23 @@ public class Main {
         System.out.println(myLinkedList.removeFirst());*/
 
         // Get(index)
-        LinkedList myLinkedList = new LinkedList(0);
+        /*LinkedList myLinkedList = new LinkedList(0);
         myLinkedList.append(1);
         myLinkedList.append(2);
         myLinkedList.append(3);
 
-        System.out.println(myLinkedList.get(2).value + "\n");
+        System.out.println(myLinkedList.get(2).value + "\n");*/
+
+        // Set(index, value)
+        LinkedList myLinkedList = new LinkedList(11);
+        myLinkedList.append(3);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
+        System.out.println("Before Set");
+        myLinkedList.printList();
+
+        System.out.println("After Set");
+        myLinkedList.set(1, 4);
+        myLinkedList.printList();
     }
 }
