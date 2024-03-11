@@ -32,7 +32,7 @@ public class Main {
         myLinkedList.printList();*/
 
         // Remove First
-        LinkedList myLinkedList = new LinkedList(2);
+        /*LinkedList myLinkedList = new LinkedList(2);
         myLinkedList.append(1);
 
         // (2) Items - Returns 2 Node
@@ -40,6 +40,14 @@ public class Main {
         // (1) Items - Returns 1 Node
         System.out.println(myLinkedList.removeFirst().value);
         // (0) Items - Returns null
-        System.out.println(myLinkedList.removeFirst());
+        System.out.println(myLinkedList.removeFirst());*/
+
+        // Get(index)
+        LinkedList myLinkedList = new LinkedList(0);
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+
+        System.out.println(myLinkedList.get(2).value + "\n");
     }
 }
