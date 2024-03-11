@@ -62,12 +62,24 @@ public class Main {
         myLinkedList.set(1, 4);
         myLinkedList.printList();*/
 
-        LinkedList myLinkedList = new LinkedList(0);
+        // Insert(index, value)
+        /*LinkedList myLinkedList = new LinkedList(0);
         myLinkedList.append(2);
         System.out.println("Before Insert");
         myLinkedList.printList();
         System.out.println("After Insert");
         myLinkedList.insert(1, 1);
+        myLinkedList.printList();*/
+
+        // Remove(index)
+        LinkedList myLinkedList = new LinkedList(11);
+        myLinkedList.append(3);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
+        System.out.println("Before Remove");
+        myLinkedList.printList();
+        System.out.println("After Remove");
+        myLinkedList.remove(2);
         myLinkedList.printList();
     }
 }
