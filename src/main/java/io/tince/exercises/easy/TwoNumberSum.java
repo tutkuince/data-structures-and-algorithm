@@ -1,6 +1,8 @@
 package io.tince.exercises.easy;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 // Two Number Sum
 // Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum.
@@ -22,7 +24,23 @@ public class TwoNumberSum {
         System.out.println(Arrays.toString(twoNumberSum(array, targetSum)));
     }
 
+    // O(n) time | O(n) space
     public static int[] twoNumberSum(int[] array, int targetSum) {
+        // Write your code here.
+        Set<Integer> numbersSet = new HashSet<>();
+        for (int num :array) {
+            int potentialMatch = targetSum - num;
+            if (numbersSet.contains(potentialMatch)) {
+                return new int[]{potentialMatch, num};
+            } else {
+                numbersSet.add(num);
+            }
+        }
+        return new int[0];
+    }
+
+    // O(n^2) time | O(1) space
+    /*public static int[] twoNumberSum(int[] array, int targetSum) {
         // Write your code here.
         int[] result = {};
         for (int i = 0; i < array.length - 1; i++) {
@@ -35,5 +53,5 @@ public class TwoNumberSum {
             }
         }
         return result;
-    }
+    }*/
 }
