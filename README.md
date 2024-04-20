@@ -11,26 +11,26 @@
 - There are singly linked lists (each node points to the next) and doubly linked lists (nodes have references to both the next and previous nodes).
 - LinkedLists are efficient for insertions and deletions in the middle but less efficient for random access.
 
-The main differences between ArrayList and LinkedList in Java are:
-- Internal Structure:
-  - ArrayList uses an array to store elements.
-  - LinkedList uses a doubly linked list structure with nodes containing data and references to the next and previous nodes.
-- Access Time:
-  - ArrayList provides faster random access time due to direct array indexing.
-  - LinkedList is slower for random access but efficient for insertions and deletions in the middle.
-- Insertions and Deletions:
-  - ArrayList is less efficient for insertions and deletions in the middle because elements need to be shifted.
-  - LinkedList excels in insertions and deletions at any position due to its structure.
-- Memory Usage:
-  - ArrayList may have slightly less memory overhead due to its simple array structure.
-  - LinkedList has more memory overhead because of the additional node references.
-- Iterating Through Elements:
-  - ArrayList is faster when iterating sequentially through elements.
-  - LinkedList is slower due to the need to follow node references.
-- Implementation:
-  - ArrayList is a more straightforward implementation.
-  - LinkedList involves more complex pointer manipulation.
+The main differences between **ArrayList** and **LinkedList** in Java are:
+- **_Internal Structure_**:
+  - **ArrayList** uses an array to store elements.
+  - **LinkedList** uses a doubly linked list structure with nodes containing data and references to the next and previous nodes.
+- **_Access Time_**:
+  - **ArrayList** provides faster random access time due to direct array indexing.
+  - **LinkedList** is slower for random access but efficient for insertions and deletions in the middle.
+- **_Insertions and Deletions_**:
+  - **ArrayList** is less efficient for insertions and deletions in the middle because elements need to be shifted.
+  - **LinkedList** excels in insertions and deletions at any position due to its structure.
+- **_Memory Usage_**:
+  - **ArrayList** may have slightly less memory overhead due to its simple array structure.
+  - **LinkedList** has more memory overhead because of the additional node references.
+- **_Iterating Through Elements_**:
+  - **ArrayList** is faster when iterating sequentially through elements.
+  - **LinkedList** is slower due to the need to follow node references.
+- **_Implementation_**:
+  - **ArrayList** is a more straightforward implementation.
+  - **LinkedList** involves more complex pointer manipulation.
  
 The choice between ArrayList and LinkedList depends on your specific use case. 
-- If you need fast random access and are not frequently inserting or removing elements in the middle, ArrayList is a better choice.
-- If you require efficient insertions and deletions or are working with large datasets, LinkedList may be more suitable.
+- If you need _fast random access and are not frequently inserting or removing elements in the middle_, **ArrayList** is a better choice.
+- If you _require efficient insertions and deletions or are working with large datasets_, **LinkedList** may be more suitable.
