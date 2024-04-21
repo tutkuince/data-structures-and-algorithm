@@ -5,6 +5,7 @@ public class Main {
         LinkedList myLinkedList = new LinkedList(4);
         myLinkedList.append(6);
         myLinkedList.prepend(2);
+        myLinkedList.removeFirst();
         myLinkedList.getHead();
         myLinkedList.getTail();
         myLinkedList.getLength();
