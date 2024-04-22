@@ -15,7 +15,11 @@ public class Main {
         myLinkedList.getLength();
         myLinkedList.printList();
         System.out.println("-------------------");
-        System.out.println(myLinkedList.get(2).value);
+        myLinkedList.reverse();
+        myLinkedList.getHead();
+        myLinkedList.getTail();
+        myLinkedList.getLength();
+        myLinkedList.printList();
 
         // (2) Items - Returns 2 Node
         // System.out.println(myLinkedList.removeLast().value);
