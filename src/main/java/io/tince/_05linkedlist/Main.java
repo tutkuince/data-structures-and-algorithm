@@ -7,6 +7,7 @@ public class Main {
         myLinkedList.prepend(2);
         myLinkedList.set(0, 0);
         myLinkedList.insert(1, 8);
+        myLinkedList.remove(2);
         /*myLinkedList.removeFirst();
         myLinkedList.removeFirst();*/
         myLinkedList.getHead();
