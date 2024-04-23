@@ -85,6 +85,23 @@ public class LinkedList {
         return false;
     }
 
+    public Node remove(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+        if (index == 0) {
+            return removeFirst();
+        } else if (index == length - 1) {
+            return removeLast();
+        }
+        Node pre = get(index - 1);
+        Node temp = get(index);
+        pre.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
     public Node removeFirst() {
         if (length == 0) {
             return null;
