@@ -57,6 +57,15 @@ public class LinkedList {
         return temp;
     }
 
+    public boolean set(int index, int value) {
+        Node updatableNode = get(index);
+        if (updatableNode != null) {
+            updatableNode.value = value;
+            return true;
+        }
+        return false;
+    }
+
     public Node removeFirst() {
         if (length == 0) {
             return null;
