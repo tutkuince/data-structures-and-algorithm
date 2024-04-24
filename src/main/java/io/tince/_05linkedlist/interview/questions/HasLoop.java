@@ -1,4 +1,4 @@
-package io.tince._05linkedlist.exercise;
+package io.tince._05linkedlist.interview.questions;
 
 /**
  * Has Loop
