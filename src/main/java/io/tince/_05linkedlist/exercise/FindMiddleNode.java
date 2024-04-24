@@ -10,6 +10,20 @@ package io.tince._05linkedlist.exercise;
  * */
 
 public class FindMiddleNode {
+
+    public static void main(String[] args) {
+        FindMiddleNode myList = new FindMiddleNode(1);
+        myList.append(2);
+        myList.append(3);
+        myList.append(4);
+        myList.append(5);
+        Node middleNode = myList.findMiddleNodeSolutionOne();
+        System.out.println(middleNode.value); // Output: 3
+        myList.append(6);
+        middleNode = myList.findMiddleNodeSolutionOne();
+        System.out.println(middleNode.value); // Output: 4
+    }
+
     private Node head;
     private Node tail;
 
@@ -29,10 +43,29 @@ public class FindMiddleNode {
 
     // WRITE FIND MIDDLE NODE METHOD HERE //
     //                                    //
-    //                                    //
+    //     SOLUTION 1                     //
     //                                    //
     //                                    //
     ////////////////////////////////////////
+    public Node findMiddleNodeSolutionOne() {
+        if (head == null || tail == null) {
+            return null;
+        }
+        int counter = 0;
+        Node temp = head;
+        while (temp.next != null) {
+            counter++;
+            temp = temp.next;
+        }
+        int result = counter % 2 == 0 ? counter / 2 : counter / 2 + 1;
+        temp = head;
+        for (int i = 0; i < result; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    
 
     public void printList() {
         Node temp = head;
