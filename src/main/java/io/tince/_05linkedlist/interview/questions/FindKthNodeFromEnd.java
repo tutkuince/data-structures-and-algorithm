@@ -22,7 +22,7 @@ public class FindKthNodeFromEnd {
         myList.append(4);
         myList.append(5);
 
-        Node result = myList.findKthFromEnd(2); // Output: Node with value 4
+        Node result = myList.findKthFromEndSolutionOne(2); // Output: Node with value 4
         System.out.println(result.value);
     }
 
@@ -91,11 +91,11 @@ public class FindKthNodeFromEnd {
 
     // WRITE FINDKTHFROMEND METHOD HERE //
     //                                  //
-    //                                  //
+    //    SOLUTION 1                    //
     //                                  //
     //                                  //
     //////////////////////////////////////
-    public Node findKthFromEnd(int k) {
+    public Node findKthFromEndSolutionOne(int k) {
         int counter = 1;
         Node temp = head;
         while (temp != null && temp.next != null) {
@@ -109,5 +109,26 @@ public class FindKthNodeFromEnd {
             temp = temp.next;
         }
         return temp;
+    }
+
+    // WRITE FINDKTHFROMEND METHOD HERE //
+    //                                  //
+    //    SOLUTION 2                    //
+    //                                  //
+    //                                  //
+    //////////////////////////////////////
+    public Node findKthFromEndSolutionTwo(int k) {
+        Node slow = head;
+        Node fast = head;
+
+        for (int i = 0; i < k; i++) {
+            if (fast == null) return null;
+            fast = fast.next;
+        }
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
     }
 }
