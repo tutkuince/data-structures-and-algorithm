@@ -17,10 +17,10 @@ public class FindMiddleNode {
         myList.append(3);
         myList.append(4);
         myList.append(5);
-        Node middleNode = myList.findMiddleNodeSolutionOne();
+        Node middleNode = myList.findMiddleNodeSolutionTwo();
         System.out.println(middleNode.value); // Output: 3
         myList.append(6);
-        middleNode = myList.findMiddleNodeSolutionOne();
+        middleNode = myList.findMiddleNodeSolutionTwo();
         System.out.println(middleNode.value); // Output: 4
     }
 
@@ -65,7 +65,21 @@ public class FindMiddleNode {
         return temp;
     }
 
-    
+    // WRITE FIND MIDDLE NODE METHOD HERE //
+    //                                    //
+    //      SOLUTION 2                    //
+    //                                    //
+    //                                    //
+    ////////////////////////////////////////
+    public Node findMiddleNodeSolutionTwo() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
 
     public void printList() {
         Node temp = head;
