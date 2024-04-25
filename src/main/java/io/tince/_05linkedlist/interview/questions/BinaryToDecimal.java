@@ -16,7 +16,7 @@ public class BinaryToDecimal {
         binaryToDecimal.append(0);
         binaryToDecimal.append(0);
 
-        System.out.println(binaryToDecimal.binaryToDecimal());
+        System.out.println(binaryToDecimal.binaryToDecimalSolution2());
     }
 
     private Node head;
@@ -103,6 +103,31 @@ public class BinaryToDecimal {
             num += (int) Math.pow(2, counter) * temp.value;
             temp = temp.next;
             counter--;
+        }
+        return num;
+    }
+
+    //   +===================================================+
+    //   |               WRITE YOUR CODE HERE  - V2          |
+    //   | Description:                                      |
+    //   | - This method converts a binary number,           |
+    //   |   represented as a linked list, to a decimal int. |
+    //   |                                                   |
+    //   | Return type: int                                  |
+    //   | - Returns the decimal equivalent of the binary    |
+    //   |   number.                                         |
+    //   |                                                   |
+    //   | Tips:                                             |
+    //   | - We use a while loop to traverse the linked list.|
+    //   | - Multiply the current sum by 2 and add the value |
+    //   |   at each node to get the decimal number.         |
+    //   +===================================================+
+    public int binaryToDecimalSolution2() {
+        int num = 0;
+        Node current = head;
+        while (current != null) {
+            num = num * 2 + current.value;
+            current = current.next;
         }
         return num;
     }
