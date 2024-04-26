@@ -5,7 +5,8 @@ public class Main {
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList(7);
         doublyLinkedList.append(2);
         doublyLinkedList.append(1);
-        doublyLinkedList.removeLast();
+        System.out.println("Removed Node Value is: " + doublyLinkedList.removeLast().value);
+        doublyLinkedList.prepend(9);
 
         doublyLinkedList.getHead();
         doublyLinkedList.getTail();
