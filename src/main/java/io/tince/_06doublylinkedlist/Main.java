@@ -18,5 +18,11 @@ public class Main {
         doublyLinkedList.getLength();
         System.out.println(doublyLinkedList.get(3).value);
         System.out.println("Value of Index(1) is changed to 3? " + doublyLinkedList.set(1, 3));
+        System.out.println("New Value is inserted to the Index(0)? " + doublyLinkedList.insert(1, 5));
+        doublyLinkedList.printList();
+        doublyLinkedList.getHead();
+        doublyLinkedList.getTail();
+        doublyLinkedList.getLength();
+
     }
 }
