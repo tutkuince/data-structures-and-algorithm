@@ -102,6 +102,8 @@ public class DoublyLinkedList {
         Node before = temp.prev;
         before.next = after;
         after.prev = before;
+        temp.next = null;
+        temp.prev = null;
         length--;
         return temp;
     }
