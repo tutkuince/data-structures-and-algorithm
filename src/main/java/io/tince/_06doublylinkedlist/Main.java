@@ -17,5 +17,6 @@ public class Main {
         doublyLinkedList.getTail();
         doublyLinkedList.getLength();
         System.out.println(doublyLinkedList.get(3).value);
+        System.out.println("Value of Index(1) is changed to 3? " + doublyLinkedList.set(1, 3));
     }
 }
