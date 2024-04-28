@@ -12,6 +12,14 @@ public class DoublyLinkedList {
         length = 1;
     }
 
+    public static void main(String[] args) {
+        DoublyLinkedList myDLL = new DoublyLinkedList(2);
+        myDLL.append(1);
+
+        System.out.println(myDLL.removeFirst().value);
+        myDLL.printAll();
+    }
+
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -34,6 +42,23 @@ public class DoublyLinkedList {
         }
         head = newNode;
         length++;
+    }
+
+    public Node removeFirst() {
+        if (length == 0) {
+            return null;
+        }
+        Node temp = head;
+        if (length == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head = temp.next;
+            head.prev = null;
+            temp.next = null;
+        }
+        length--;
+        return temp;
     }
 
     public Node removeLast() {
