@@ -131,16 +131,6 @@ public class Reverse {
         // 1 <-> 2 <-> 3 <-> 4 <-> 5
         // 5 <-> 2 <-> 3 <-> 4 <-> 1
         //
-        Node currentNode = head;
-        Node temporaryNode = null;
-        while (currentNode != null) {
-            temporaryNode = currentNode.prev;
-            currentNode.prev = currentNode.next;
-            currentNode.next = temporaryNode;
-            currentNode = currentNode.prev;
-        }
-        temporaryNode = head;
-        head = tail;
-        tail = temporaryNode;
+        // TODO
     }
 }
