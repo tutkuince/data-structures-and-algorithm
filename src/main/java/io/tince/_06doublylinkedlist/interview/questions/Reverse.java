@@ -22,6 +22,8 @@ public class Reverse {
         Reverse myDLL = new Reverse(1);
         myDLL.append(2);
         myDLL.append(3);
+        myDLL.append(4);
+        myDLL.append(5);
 
         System.out.println("DLL before reverse:");
         myDLL.printList();
@@ -30,6 +32,7 @@ public class Reverse {
 
         System.out.println("\nDLL after reverse:");
         myDLL.printAll();
+
     }
 
     class Node {
@@ -130,7 +133,17 @@ public class Reverse {
     public void reverse() {
         // 1 <-> 2 <-> 3 <-> 4 <-> 5
         // 5 <-> 2 <-> 3 <-> 4 <-> 1
-        //
-        // TODO
+        Node current = head;
+        Node temp = null;
+
+        while (current != null) {
+            temp = current.prev;
+            current.prev = current.next;
+            current.next = temp;
+            current = current.prev;
+        }
+        temp = head;
+        head = tail;
+        tail = temp;
     }
 }
