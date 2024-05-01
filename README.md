@@ -38,3 +38,7 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 ## Stack
 - **Stack** is a linear data structure that follows a particular order in which the operations are performed. The order may be **LIFO(Last In First Out)** or **FILO(First In Last Out)**.
 - LIFO implies that the element that is inserted last, comes out first and FILO implies that the element that is inserted first, comes out last.
+
+## Queue
+- The Queue interface is present in java.util package and extends the Collection interface is used to hold the elements about to be processed in FIFO(First In First Out) order
+- It is an ordered list of objects with its use limited to inserting elements at the end of the list and deleting elements from the start of the list, it follows the **FIFO** or the First-In-First-Out principle.
