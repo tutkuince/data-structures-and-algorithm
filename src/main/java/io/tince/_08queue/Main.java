@@ -3,6 +3,7 @@ package io.tince._08queue;
 public class Main {
     public static void main(String[] args) {
         Queue myQueue = new Queue(7);
+        myQueue.enqueue(11);
 
         myQueue.getFirst();
         myQueue.getLast();
