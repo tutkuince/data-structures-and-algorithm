@@ -42,3 +42,8 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 ## Queue
 - The Queue interface is present in java.util package and extends the Collection interface is used to hold the elements about to be processed in FIFO(First In First Out) order
 - It is an ordered list of objects with its use limited to inserting elements at the end of the list and deleting elements from the start of the list, it follows the **FIFO** or the First-In-First-Out principle.
+
+## Tree
+- A **tree** is a kind of data structure that is used to represent the data in hierarchical form.
+- It can be defined as a collection of objects or entities called as nodes that are linked together to simulate a hierarchy.
+- **Tree** is a non-linear data structure as the data in a tree is not stored linearly or sequentially. 
