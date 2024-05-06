@@ -46,4 +46,8 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 ## Tree
 - A **tree** is a kind of data structure that is used to represent the data in hierarchical form.
 - It can be defined as a collection of objects or entities called as nodes that are linked together to simulate a hierarchy.
-- **Tree** is a non-linear data structure as the data in a tree is not stored linearly or sequentially. 
+- **Tree** is a non-linear data structure as the data in a tree is not stored linearly or sequentially.
+
+### Binary Search Tree
+- In a **Binary Search Tree**, the value of left node must be smaller thatn the parent node, and the value of right node must be greater than the parent node.
+- This rule is applied recursively to the left and right subtrees of the root.  
