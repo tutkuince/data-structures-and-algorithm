@@ -50,4 +50,13 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 
 ### Binary Search Tree
 - In a **Binary Search Tree**, the value of left node must be smaller thatn the parent node, and the value of right node must be greater than the parent node.
-- This rule is applied recursively to the left and right subtrees of the root.  
+- This rule is applied recursively to the left and right subtrees of the root.
+
+### Binary Search Tree vs LinkedList
+- An **insert** into a **Binary Search Tree** is typically **(log n)**
+- **Appending** an item onto the end of a **Linked List** is **O(1)**
+- **Binary Search Trees** use divide and conquer.
+- Adding an item to **Binary Search Tree** is always log n ?
+  - Omega (best case) and Theta (average case) are both (log n)
+  - However, worst case is O(n) and Big O measures worst case.
+  - The typically treat Binary Search Trees as O(log n) but technically they are O(n)
