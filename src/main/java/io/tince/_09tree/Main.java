@@ -13,5 +13,7 @@ public class Main {
         myBST.insert(27);
         System.out.println("root: " + myBST.getRoot().value);
         System.out.println(myBST.getRoot().left.right.value);
+        System.out.println("27 contains in BinarySearchTree? " + myBST.contains(27));
+        System.out.println("17 contains in BinarySearchTree? " + myBST.contains(17));
     }
 }
