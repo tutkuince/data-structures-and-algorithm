@@ -60,3 +60,10 @@ The choice between ArrayList and LinkedList depends on your specific use case.
   - Omega (best case) and Theta (average case) are both (log n)
   - However, worst case is O(n) and Big O measures worst case.
   - The typically treat Binary Search Trees as O(log n) but technically they are O(n)
+ 
+## Hash Table
+- The **Hashtable** class implements a hash table, which maps keys to values.
+- Any non-null object can be used as a key or as a value.
+- To successfully store and retrieve objects from a hashtable, the objects used as keys must implement the **hashCode** method and the **equals** method.
+- In addition, the **Hashtable** class is synchronized, which can result in slower performance compared to other implementations of the **Map** interface.
+- In general, it's recommended to use the Map interface or one of its implementations (such as HashMap or ConcurrentHashMap) instead of the Hashtable class.
