@@ -1,5 +1,7 @@
 package io.tince._09tree.exercise;
 
+import java.util.Objects;
+
 public class BinarySearchTree {
 
     // CREATE CLASS VARIABLE (ROOT) AND NODE CLASS HERE//
@@ -22,5 +24,36 @@ public class BinarySearchTree {
 
     public Node getRoot() {
         return root;
+    }
+
+    // WRITE INSERT METHOD HERE //
+    //                          //
+    //                          //
+    //                          //
+    //                          //
+    //////////////////////////////
+    public boolean insert(int value) {
+        Node newNode = new Node(value);
+        if (Objects.isNull(root)) {
+            root = newNode;
+            return true;
+        }
+        Node temp = root;
+        while (true) {
+            if (newNode.value == temp.value) return false;
+            if (newNode.value < temp.value) {
+                if (Objects.isNull(temp.left)) {
+                    temp.left = newNode;
+                    return true;
+                }
+                temp = temp.left;
+            } else {
+                if (Objects.isNull(temp.right)) {
+                    temp.right = newNode;
+                    return true;
+                }
+                temp = temp.right;
+            }
+        }
     }
 }
