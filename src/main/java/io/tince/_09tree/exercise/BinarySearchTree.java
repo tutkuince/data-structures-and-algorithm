@@ -56,4 +56,24 @@ public class BinarySearchTree {
             }
         }
     }
+
+    // WRITE CONTAINS METHOD HERE //
+    //                            //
+    //                            //
+    //                            //
+    //                            //
+    ////////////////////////////////
+    public boolean contains(int value) {
+        Node temp = root;
+        while (temp != null) {
+            if (temp.value < value) {
+                temp = temp.right;
+            } else if (temp.value > value) {
+                temp = temp.left;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }
