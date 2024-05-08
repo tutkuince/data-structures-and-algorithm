@@ -12,5 +12,8 @@ public class Main {
         myHashTable.printTable();
 
         System.out.println(myHashTable.get("bolts"));
+
+        System.out.println("-----------");
+        System.out.println(myHashTable.keys());
     }
 }
