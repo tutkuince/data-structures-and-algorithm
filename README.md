@@ -67,3 +67,8 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - To successfully store and retrieve objects from a hashtable, the objects used as keys must implement the **hashCode** method and the **equals** method.
 - In addition, the **Hashtable** class is synchronized, which can result in slower performance compared to other implementations of the **Map** interface.
 - In general, it's recommended to use the Map interface or one of its implementations (such as HashMap or ConcurrentHashMap) instead of the Hashtable class.
+
+### Hash Table Big O
+- Both Insert and Lookup by key in a Hash Table is O(1)
+- **Binary Search Trees** are sorted which makes them better at **searching** for all values that fall within a range.
+- Looking up a value in a Hash Table is O(1)
