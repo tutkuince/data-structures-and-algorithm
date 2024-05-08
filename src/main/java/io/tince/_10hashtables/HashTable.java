@@ -19,6 +19,20 @@ public class HashTable {
         }
     }
 
+    public void set(String key, int value) {
+        int index = hash(key);
+        Node newNode = new Node(key, value);
+        if (dataMap[index] == null) {
+            dataMap[index] = newNode;
+        } else {
+            Node temp = dataMap[index];
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
     private int hash(String key) {
         int hash = 0;
         char[] keyChars = key.toCharArray();
