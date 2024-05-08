@@ -19,6 +19,15 @@ public class HashTable {
         }
     }
 
+    private int hash(String key) {
+        int hash = 0;
+        char[] keyChars = key.toCharArray();
+        for (int asciiValue : keyChars) {
+            hash = (hash + asciiValue * 23) % dataMap.length;
+        }
+        return hash;
+    }
+
     class Node {
         String key;
         int value;
