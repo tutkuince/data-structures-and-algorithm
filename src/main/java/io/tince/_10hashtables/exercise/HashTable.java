@@ -1,5 +1,6 @@
 package io.tince._10hashtables.exercise;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class HashTable {
@@ -98,5 +99,23 @@ public class HashTable {
             temp = temp.next;
         }
         return 0;
+    }
+
+    ///  WRITE KEYS METHOD HERE  ///
+    //                            //
+    //                            //
+    //                            //
+    //                            //
+    ////////////////////////////////
+    public ArrayList<String> keys() {
+        ArrayList<String> keyList = new ArrayList<>();
+        for (int i = 0; i < dataMap.length; i++) {
+            Node temp = dataMap[i];
+            while (temp != null) {
+                keyList.add(temp.key);
+                temp = temp.next;
+            }
+        }
+        return keyList;
     }
 }
