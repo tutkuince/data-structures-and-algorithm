@@ -3,7 +3,15 @@ package io.tince._10hashtables.interview.questions;
 import java.util.HashMap;
 import java.util.Map;
 
-// There is two arrays and find item in common
+/**
+ * Item In Common
+ *
+ * Write a function "itemInCommon(array1, array2)" that takes two arrays as input an returns "true"
+ * if there is at least one common item between the two lists, false otherwise.
+ *
+ * Use a "HashMap" to solve the problem that creates an O(n) time complexity.
+ *
+ * */
 public class ItemInCommon {
     public static void main(String[] args) {
         int[] nums1 = new int[]{1, 3, 5};
