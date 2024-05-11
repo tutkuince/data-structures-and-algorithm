@@ -1,8 +1,6 @@
 package io.tince._10hashtables.interview.questions;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Group Anagrams
@@ -29,16 +27,9 @@ public class GroupAnagrams {
     //                                 //
     //                                 //
     /////////////////////////////////////
-    private static List<List<String>> groupAnagrams(String[] strings) {
-        // <String, List<Character> test
-        Map<String, Integer> resultMap = new HashMap<>();
-        for (String str : strings) {
-            resultMap.put(str, strings.length);
-        }
-        for (int i = 0; i < resultMap.size(); i++) {
-
-        }
-        return null;
+    public static List<List<String>> groupAnagrams(String[] strings) {
+        // "eat", "tea", "tan", "ate", "nat", "bat"
+       return null;
     }
 
     public static void main(String[] args) {
