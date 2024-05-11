@@ -1,9 +1,7 @@
 package io.tince._10hashtables.interview.questions;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Two Sum
@@ -30,22 +28,12 @@ public class TwoSum {
     //                              //
     //////////////////////////////////
     public static int[] twoSum(int[] nums, int target) {
-        int[] result = new int[2];
-        Map<Integer, Integer> resultMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            resultMap.put(nums[i], nums[i]);
-        }
-        // {3, 2, 4} -> target = 6
-        for (Integer num : resultMap.keySet()) {
-            int requiredValue = target - num;
-            if (num != requiredValue && resultMap.containsKey(requiredValue)) {
-                result[0] = Arrays.binarySearch(nums, num);
-                result[1] = Arrays.binarySearch(nums, requiredValue);
-                return result;
-            }
-        }
-
-        return new int[0];
+        // Index, Number
+        // {3, 3} -> Target: 6
+        // {3, 2, 4} -> Target: 6
+        // {2, 7, 11, 15} -> Target: 9
+        Map<Integer, Integer> numMap = new HashMap<>();
+        return new int[]{};
     }
 
 
