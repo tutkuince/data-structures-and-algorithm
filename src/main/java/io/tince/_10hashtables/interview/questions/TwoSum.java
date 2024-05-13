@@ -33,6 +33,13 @@ public class TwoSum {
         // {3, 2, 4} -> Target: 6
         // {2, 7, 11, 15} -> Target: 9
         Map<Integer, Integer> numMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int requiredValue = target - nums[i];
+            if (numMap.containsKey(requiredValue)) {
+                return new int[]{numMap.get(requiredValue), i};
+            }
+            numMap.put(nums[i], i);
+        }
         return new int[]{};
     }
 
