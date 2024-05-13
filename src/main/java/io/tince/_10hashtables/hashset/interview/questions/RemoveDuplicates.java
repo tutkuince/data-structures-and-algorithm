@@ -1,4 +1,4 @@
-package io.tince._10hashtables.interview.questions;
+package io.tince._10hashtables.hashset.interview.questions;
 
 import java.util.ArrayList;
 import java.util.HashSet;
