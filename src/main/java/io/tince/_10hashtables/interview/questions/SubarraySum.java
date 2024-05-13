@@ -1,30 +1,32 @@
 package io.tince._10hashtables.interview.questions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Subarray Sum
- *
+ * <p>
  * Give an array of integers "nums" and a target integer "target", write a method called "subarraySum"
  * that finds the indices of a contiguous subarray in "nums" that add up to the "target" sum using a hash table (HashMap)
- *
+ * <p>
  * Your function should take two arguments:
- *  - "nums": an array of integers representing the input array
- *  - "target": an integer representing the target sum
- *
+ * - "nums": an array of integers representing the input array
+ * - "target": an integer representing the target sum
+ * <p>
  * Your function should return a list of two integers representing the starting and ending indices of the subarray that adds up to the target sum.
  * If there is no such subarray, your function should return an empty list.
- *
- * */
+ */
 public class SubarraySum {
 
-    // WRITE SUBARAYSUM METHOD HERE //
+    //WRITE SUB ARRAY SUM METHOD HERE//
     //                              //
     //                              //
     //                              //
     //                              //
     //////////////////////////////////
     public static int[] subarraySum(int[] nums, int target) {
-        // TODO:
-        return null;
+        // TODO
+        return new int[]{};
     }
 
 
