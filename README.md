@@ -86,3 +86,7 @@ The choice between ArrayList and LinkedList depends on your specific use case.
   - Edges can connect any two nodes in any possible way.
   - There are no rules.
   - Sometimes, edges are also known as arcs. Every edge can be labelled/unlabelled.
+### Graph Big O
+- Adding a Vertex in a Graph with an Adjacency List is O(1)
+- Removing a vertex is O(n)
+  - Finding the vertex is O(1). However, you can also have to remove all of the edges associated with the vertex you are removing.
