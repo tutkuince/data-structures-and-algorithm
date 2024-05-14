@@ -72,3 +72,8 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Both Insert and Lookup by key in a Hash Table is O(1)
 - **Binary Search Trees** are sorted which makes them better at **searching** for all values that fall within a range.
 - Looking up a value in a Hash Table is O(1)
+
+## Graph
+- Graph is a non-linear data structure consisting of vertices and edges.
+- The vertices are sometimes also referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph.
+- Graph data structures are a powerful tool for representing and analyzing complex relationships between objects or entities.
