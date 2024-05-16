@@ -42,9 +42,9 @@ public class Heap {
             int rightIndex = rightChild(index);
 
             if (leftIndex < heap.size() && heap.get(leftIndex) > heap.get(maxIndex)) {
-                maxIndex = rightIndex;
-            } else if (rightIndex < heap.size() && heap.get(rightIndex) > heap.get(maxIndex)) {
                 maxIndex = leftIndex;
+            } else if (rightIndex < heap.size() && heap.get(rightIndex) > heap.get(maxIndex)) {
+                maxIndex = rightIndex;
             }
             if (maxIndex != index) {
                 swap(index, maxIndex);
