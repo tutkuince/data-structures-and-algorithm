@@ -90,3 +90,12 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Adding a Vertex in a Graph with an Adjacency List is O(1)
 - Removing a vertex is O(n)
   - Finding the vertex is O(1). However, you can also have to remove all of the edges associated with the vertex you are removing.
+ 
+## Heap
+- A **Heap** is a complete binary tree data structure that satisfies the heap property:
+  - for every node, the value of its children is less than or equal to its own value.
+- Heaps are usually used to implement priority queues, where the smallest or largest element is always at the root of the tree
+### Max Heap
+- The root node contains the maximum value, and the values decrease as you moved down the tree
+### Min Heam
+- The root node contains the minimum value, and the values increase as you move down the tree.
