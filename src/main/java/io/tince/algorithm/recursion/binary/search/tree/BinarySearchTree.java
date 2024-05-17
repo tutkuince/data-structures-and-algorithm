@@ -15,33 +15,27 @@ public class BinarySearchTree {
         }
     }
 
-    public boolean insert(int value) {
-        Node newNode = new Node(value);
-        if (Objects.isNull(root)) {
-            root = newNode;
-            return true;
-        }
-        Node temp = root;
-        while (true) {
-            if (newNode.value == temp.value) return false;
-            if (newNode.value < temp.value) {
-                if (Objects.isNull(temp.left)) {
-                    temp.left = newNode;
-                    return true;
-                }
-                temp = temp.left;
-            } else {
-                if (Objects.isNull(temp.right)) {
-                    temp.right = newNode;
-                    return true;
-                }
-                temp = temp.right;
-            }
-        }
+    public Node getRoot() {
+        return root;
+    }
+
+    public void rInsert(int value) {
+        if (Objects.isNull(root)) root = new Node(value);
+        rInsert(root, value);
     }
 
     public boolean rContains(int value) {
         return rContains(root, value);
+    }
+
+    private Node rInsert(Node currentNode, int value) {
+        if (Objects.isNull(currentNode)) return new Node(value);
+        if (currentNode.value > value) {
+            currentNode.left = rInsert(currentNode.left, value);
+        } else if (currentNode.value < value) {
+            currentNode.right = rInsert(currentNode.right, value);
+        }
+        return currentNode;
     }
 
     private boolean rContains(Node currentNode, int value) {
