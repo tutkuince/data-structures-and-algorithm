@@ -24,9 +24,20 @@ public class BinarySearchTree {
         rInsert(root, value);
     }
 
+
+
+    public int minValue(Node currentNode) {
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode;
+    }
+
     public boolean rContains(int value) {
         return rContains(root, value);
     }
+
+
 
     private Node rInsert(Node currentNode, int value) {
         if (Objects.isNull(currentNode)) return new Node(value);
