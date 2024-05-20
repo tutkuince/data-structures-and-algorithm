@@ -77,4 +77,25 @@ public class BinarySearchTree {
     }
 
     public boolean rContains(int value) { return rContains(root, value); }
+
+    // WRITE THE RECURSIVE INSERT METHOD HERE //
+    //                                        //
+    //                                        //
+    //                                        //
+    //                                        //
+    ////////////////////////////////////////////
+    private Node rInsert(Node root, int value) {
+        if (root == null) return new Node(value);
+        if (value > root.value) {
+            root.right = rInsert(root.right, value);
+        } else if (value < root.value) {
+            root.left = rInsert(root.left, value);
+        }
+        return root;
+    }
+
+    public void rInsert(int value) {
+        if (root == null) root = new Node(value);
+        rInsert(root, value);
+    }
 }
