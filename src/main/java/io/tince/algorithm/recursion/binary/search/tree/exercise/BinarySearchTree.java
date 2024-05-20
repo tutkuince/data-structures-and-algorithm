@@ -98,4 +98,17 @@ public class BinarySearchTree {
         if (root == null) root = new Node(value);
         rInsert(root, value);
     }
+
+    // WRITE THE MINVALUE METHOD HERE //
+    //                                //
+    //                                //
+    //                                //
+    //                                //
+    ////////////////////////////////////
+    public int minValue(Node currentNode) {
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
 }
