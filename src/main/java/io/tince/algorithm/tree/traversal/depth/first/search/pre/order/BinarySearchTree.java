@@ -5,7 +5,7 @@ import java.util.*;
 public class BinarySearchTree {
     private Node root;
 
-    public List<Integer> depthFirstSearch() {
+    public List<Integer> depthFirstSearchPreOrder() {
         List<Integer> results = new ArrayList<>();
 
         class Traverse {
