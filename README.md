@@ -107,4 +107,8 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Storing the frontier nodes in a queue creates the level-by-level pattern of a breadth-first search
 - Child nodes are searched in the order they are added to the frontier.
 - The nodes on the next level are always behind the nodes on the current level.
-- Breadth-first search is known as a complete algorithm since no matter how deep the goal is in the tree it will always be located. 
+- Breadth-first search is known as a complete algorithm since no matter how deep the goal is in the tree it will always be located.
+### Depth First Search 
+- Frontier nodes stored in a stack create the deep dive of a depth-first search.
+- Nodes added to the frontier early on can expect to remain in the stack while their sibling’s children (and their children, and so on) are searched.
+- Depth-first search is not considered a complete algorithm since searching an infinite branch in a tree can go on forever. In this situation, an entire section of the tree would be left un-inspected.
