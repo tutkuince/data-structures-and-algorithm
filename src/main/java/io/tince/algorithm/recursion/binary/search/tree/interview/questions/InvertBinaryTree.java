@@ -82,6 +82,10 @@ public class InvertBinaryTree {
         root = invertTree(root);
     }
 
+    private Node invertTree(Node root) {
+        return null;
+    }
+
     //   +===================================================+
     //   |              WRITE YOUR CODE HERE                 |
     //   | Description:                                      |
