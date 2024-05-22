@@ -99,3 +99,12 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - The root node contains the maximum value, and the values decrease as you moved down the tree
 ### Min Heam
 - The root node contains the minimum value, and the values increase as you move down the tree.
+
+## Tree Traversal 
+- **Tree Traversal techniques** include various ways to visit all the nodes of the tree.
+- Unlike linear data structures (Array, Linked List, Queues, Stacks, etc) which have only one logical way to traverse them, trees can be traversed in different ways.
+### Breadth First Search
+- Storing the frontier nodes in a queue creates the level-by-level pattern of a breadth-first search
+- Child nodes are searched in the order they are added to the frontier.
+- The nodes on the next level are always behind the nodes on the current level.
+- Breadth-first search is known as a complete algorithm since no matter how deep the goal is in the tree it will always be located. 
