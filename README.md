@@ -127,3 +127,12 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Go through the array to find the lowest value.
 - Move the lowest value to the front of the unsorted part of the array.
 - Go through the array again as many times as there are values in the array.
+## Insertion Sort
+- **Insertion Sort** is a simplke sorting algoritm that works by iteratively inserting each element of an unsorted list into its correct poistion in a sorted portion of the list.
+- It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output.
+#### In Insertion Sort Algoritm,
+- We have to start with second element of the array as first element in the array is assumed to be sorted.
+- Compare second element with the first element and check if the second element is smaller then swap them.
+- Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements.
+- Continue this process, comparing each element with the ones before it and swapping as need to place it in the correct position among the sorted elements.
+- Repeat until the entire array is sorted.
