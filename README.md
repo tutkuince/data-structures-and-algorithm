@@ -112,3 +112,12 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Frontier nodes stored in a stack create the deep dive of a depth-first search.
 - Nodes added to the frontier early on can expect to remain in the stack while their sibling’s children (and their children, and so on) are searched.
 - Depth-first search is not considered a complete algorithm since searching an infinite branch in a tree can go on forever. In this situation, an entire section of the tree would be left un-inspected.
+
+## Basic Sorts
+### Bubble Sort
+- **Bubble Sort** is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order.
+- This algorithm is not suitable for large data sets as its average and worst-case time complexityh is quite high.
+#### In Bubble Sort Algorithm,
+- traverse from left and compare adjacent elements and the higher on is placed at right side.
+- In this way, the largest element is moved to the rightmost end at first.
+- This process is then continued to find the second largest and place it and so on until the data is stored.
