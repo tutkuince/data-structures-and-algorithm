@@ -121,3 +121,9 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - traverse from left and compare adjacent elements and the higher on is placed at right side.
 - In this way, the largest element is moved to the rightmost end at first.
 - This process is then continued to find the second largest and place it and so on until the data is stored.
+### Selection Sort
+- **Selection Sort** is a simple and efficient sorting algoritm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list.
+#### In Selection Sort Algorithm,
+- Go through the array to find the lowest value.
+- Move the lowest value to the front of the unsorted part of the array.
+- Go through the array again as many times as there are values in the array.
