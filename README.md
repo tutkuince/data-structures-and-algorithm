@@ -136,3 +136,10 @@ The choice between ArrayList and LinkedList depends on your specific use case.
 - Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements.
 - Continue this process, comparing each element with the ones before it and swapping as need to place it in the correct position among the sorted elements.
 - Repeat until the entire array is sorted.
+
+## Merge Sort
+- **Merge Sort** is a algorithm that follows the **divide-and-conquer** approach
+- It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then mergining them back together to obtain the sorted array.
+- In simple terms, we can say that the process of **merge sort** is to divide the array into two halves, sort each half, and then merge the sorted halves back together.  This process is repeated until the entire array is sorted.
+### Merge Sort Big O
+- (n log n)
