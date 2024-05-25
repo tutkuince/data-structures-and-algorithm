@@ -4,14 +4,13 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[] array1 = {1, 3, 7, 8};
-        int[] array2 = {2, 4, 5, 6};
-
-        System.out.println(Arrays.toString(merge(array1, array2)));
+        int[] array = {1, 3, 4, 2, 10, 7};
+        System.out.println(Arrays.toString(mergeSort(array)));  // [1, 2, 3, 4, 7, 10]
     }
 
     public static int[] mergeSort(int[] array) {
         if (array.length == 1) return array;
+        
         int minIndex = array.length / 2;
         int[] left = mergeSort(Arrays.copyOfRange(array, 0, minIndex));
         int[] right = mergeSort(Arrays.copyOfRange(array, minIndex, array.length));
@@ -41,7 +40,7 @@ public class MergeSort {
             index++;
         }
         while (j < array2.length) {
-            combined[index] = array1[j];
+            combined[index] = array2[j];
             j++;
             index++;
         }
