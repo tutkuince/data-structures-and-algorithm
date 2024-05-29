@@ -1,6 +1,6 @@
-package io.tince.algorithm.recursion;
+package io.tince.dynamic.programming;
 
-public class FibonacciSequence {
+public class NoMemoizationFibonacciSequence {
     static int counter = 0;
 
     public static void main(String[] args) {
