@@ -19,7 +19,7 @@ public class RemoveElement {
     // WRITE THE REMOVE ELEMENT METHOD HERE//
     //                                     //
     //                                     //
-    //                                     //
+    //            Solution - 1             //
     //                                     //
     /////////////////////////////////////////
     public static int removeElement(int[] nums, int val) {
@@ -36,6 +36,17 @@ public class RemoveElement {
             }
         }
         return result.length;
+    }
+
+    public static int removeElement2(int[] nums, int val) {
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
+                nums[i] = nums[j];
+                i++;
+            }
+        }
+        return i;
     }
 
 
