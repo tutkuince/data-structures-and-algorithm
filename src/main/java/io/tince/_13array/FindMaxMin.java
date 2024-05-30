@@ -34,6 +34,25 @@ public class FindMaxMin {
         return new int[]{tempMax, tempMin};
     }
 
+    //WRITE THE FIND MAX MIN METHOD HERE//
+    //                                  //
+    //                                  //
+    //           SOLUTION - 2           //
+    //                                  //
+    //////////////////////////////////////
+    public static int[] findMaxMin2(int[] myList) {
+        int maximum = myList[0];
+        int minimum = myList[0];
+        for (int num : myList) {
+            if (num > maximum) {
+                maximum = num;
+            } else if (num < minimum) {
+                minimum = num;
+            }
+        }
+        return new int[] {maximum, minimum};
+    }
+
 
     public static void main(String[] args) {
 
