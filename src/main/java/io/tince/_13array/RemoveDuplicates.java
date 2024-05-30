@@ -45,6 +45,29 @@ public class RemoveDuplicates {
         return index;
     }
 
+    // WRITE THE REMOVE DUPLICATES METHOD HERE//
+    //                                        //
+    //                                        //
+    //              SOLUTION - 2              //
+    //                                        //
+    ////////////////////////////////////////////
+    public static int removeDuplicates2(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+
+        int writePointer = 1;
+
+        for (int readPointer = 1; readPointer < nums.length; readPointer++) {
+            if (nums[readPointer] != nums[readPointer - 1]) {
+                nums[writePointer] = nums[readPointer];
+                writePointer++;
+            }
+        }
+
+        return writePointer;
+    }
+
 
 
     public static void main(String[] args) {
