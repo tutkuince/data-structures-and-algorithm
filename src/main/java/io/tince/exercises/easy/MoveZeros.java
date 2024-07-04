@@ -19,6 +19,24 @@ public class MoveZeros {
     public static void main(String[] args) {
         int[] numbers = new int[]{0, 1, 0, 3, 12};
         System.out.println(Arrays.toString(new MoveZeros().moveZerosBruteForceApproach(numbers)));
+        System.out.println(Arrays.toString(new MoveZeros().moveZerosOptimalSolution(numbers)));
+    }
+
+    // Optimal Solution
+    // Time Complexity:  O(n + m)
+    // Space Complexity: O(1)
+    public int[] moveZerosOptimalSolution(int[] numbers) {
+        int nonZeroCounter = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != 0) {
+                numbers[nonZeroCounter] = numbers[i];
+                nonZeroCounter++;
+            }
+        }
+        for (int i = nonZeroCounter; i < numbers.length; i++) {
+            numbers[i] = 0;
+        }
+        return numbers;
     }
 
 
