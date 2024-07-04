@@ -23,6 +23,8 @@ public class MoveZeros {
 
 
     // Brute Force
+    // Time Complexity:  O(n+n-m) -> O(2n-m)
+    // Space Complexity: O(n)
     public int[] moveZerosBruteForceApproach(int[] numbers) {
         int[] result = new int[numbers.length];
         int nonZeroCount = 0;
