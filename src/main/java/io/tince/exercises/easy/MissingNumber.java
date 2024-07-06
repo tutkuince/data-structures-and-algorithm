@@ -31,8 +31,8 @@ import java.util.Arrays;
  * */
 public class MissingNumber {
     public static void main(String[] args) {
-        int[] nums = new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1};
-        System.out.println(new MissingNumber().missingNumberSumOfAllElementsApproach(nums));
+        int[] nums = new int[]{3, 0, 1};
+        System.out.println(new MissingNumber().missingNumberXOROperation(nums));
     }
 
     // Sorting Approach
@@ -47,10 +47,27 @@ public class MissingNumber {
     }
 
     // Sum of all elements
+    // Sum of n numbers = n(n + 1) / 2
     public int missingNumberSumOfAllElementsApproach(int[] nums) {
         int n = nums.length;
         int sum = (n * (n + 1)) / 2;
         int actualSum = Arrays.stream(nums).sum();
         return sum - actualSum;
+    }
+
+    // XOR operation
+    // If we XOR something with 0, it will return the same number   -> 5 ^ 0 = 5
+    // If we XOR 2 same numbers the output will be 0.               -> 5 ^ 5 = 0
+    // XORing 2 different numbers will result nothing               -> 4 ^ 5 = 4 ^ 5
+    public int missingNumberXOROperation(int[] nums) {
+        int n = nums.length;
+        int ans = 0;
+        for (int i = 1; i <= n; i++) {
+            ans ^= i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            ans ^= nums[i];
+        }
+        return ans;
     }
 }
