@@ -2,6 +2,8 @@ package io.tince.exercises.easy;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Missing Number
@@ -32,7 +34,7 @@ import java.util.Arrays;
 public class MissingNumber {
     public static void main(String[] args) {
         int[] nums = new int[]{3, 0, 1};
-        System.out.println(new MissingNumber().missingNumberXOROperation(nums));
+        System.out.println(new MissingNumber().missingNumberMapOperation(nums));
     }
 
     // Sorting Approach
@@ -69,5 +71,18 @@ public class MissingNumber {
             ans ^= nums[i];
         }
         return ans;
+    }
+
+    // Map Approach
+    public int missingNumberMapOperation(int[] nums) {
+        int n = nums.length;
+        Map<Integer, Boolean> presentedNumbers = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            presentedNumbers.put(nums[i], true);
+        }
+        for (int i = 0; i < n; i++) {
+            if (!presentedNumbers.containsKey(i)) return i;
+        }
+        return -1;
     }
 }
