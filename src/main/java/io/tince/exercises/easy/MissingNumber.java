@@ -32,7 +32,7 @@ import java.util.Arrays;
 public class MissingNumber {
     public static void main(String[] args) {
         int[] nums = new int[]{9, 6, 4, 2, 3, 5, 7, 0, 1};
-        System.out.println(new MissingNumber().missingNumber(nums));
+        System.out.println(new MissingNumber().missingNumberSumOfAllElementsApproach(nums));
     }
 
     // Sorting Approach
@@ -44,5 +44,13 @@ public class MissingNumber {
             if (nums[i] != i) return i;
         }
         return index;
+    }
+
+    // Sum of all elements
+    public int missingNumberSumOfAllElementsApproach(int[] nums) {
+        int n = nums.length;
+        int sum = (n * (n + 1)) / 2;
+        int actualSum = Arrays.stream(nums).sum();
+        return sum - actualSum;
     }
 }
