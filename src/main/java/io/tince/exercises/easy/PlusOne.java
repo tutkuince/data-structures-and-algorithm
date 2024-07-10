@@ -59,7 +59,7 @@ public class PlusOne {
         }
         if (isNeedNewArray) {
             digits = new int[digits.length + 1];
-            di
+            digits[0] = 1;
         }
         return digits;
     }
