@@ -1,8 +1,6 @@
 package io.tince.exercises.easy;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Contains Duplicate
@@ -28,8 +26,18 @@ import java.util.Set;
 
 public class ContainsDuplicate {
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3, 1};
-        System.out.println(new ContainsDuplicate().containsDuplicateBySorting(nums));
+        int[] nums = new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+        System.out.println(new ContainsDuplicate().containsDuplicateByMap(nums));
+    }
+
+    // solution with map
+    public boolean containsDuplicateByMap(int[] nums) {
+        Map<Integer, Boolean> numberContainsMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (numberContainsMap.containsKey(nums[i])) return true;
+            numberContainsMap.put(nums[i], true);
+        }
+        return false;
     }
 
     // other solution
