@@ -60,5 +60,41 @@ public class MonotonicArray {
         return result;
     }
 
-    
+    // Optimal Solution
+    public boolean isMonotonic2(int[] nums) {
+        boolean aes = nums[0] < nums[nums.length-1];
+
+        if(aes){
+            for(int i=0; i < nums.length - 1; i++){
+                if(nums[i] > nums[i+1]) return false;
+            }
+        }
+        else {
+            for(int i=0; i < nums.length - 1; i++){
+                if(nums[i] < nums[i+1]) return false;
+            }
+        }
+
+        return true;
+    }
+
+    // less code
+    public boolean isMonotonic3(int[] nums) {
+        boolean monoInc = false;
+        boolean monoDec = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i + 1] - nums[i] > 0) {
+                monoInc = true;
+                if (monoDec) {
+                    return false;
+                }
+            } else if (nums[i + 1] - nums[i] < 0) {
+                monoDec = true;
+                if (monoInc) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
