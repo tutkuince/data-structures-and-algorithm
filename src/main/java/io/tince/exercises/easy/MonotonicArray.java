@@ -26,27 +26,39 @@ public class MonotonicArray {
         int[] nums3 = new int[]{1, 3, 2};
         int[] nums4 = new int[]{1, 1, 0};
         int[] nums5 = new int[]{11, 11, 9, 4, 3, 3, 3, 1, -1, -1, 3, 3, 3, 5, 5, 5};
-        System.out.println(new MonotonicArray().isMonotonic(nums5));
+        System.out.println(new MonotonicArray().isMonotonic(nums4));
     }
 
+    // Brute Force
     public boolean isMonotonic(int[] nums) {
-        // TODO: test casses not fully passed
         boolean result = false;
         boolean increasing = false;
         boolean decreasing = false;
+        int increasingCount = 0;
+        int decreasingCount = 0;
+
         if (nums.length == 1) return true;
 
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i - 1] <= nums[i] && !decreasing) {
+            if (nums[i - 1] <= nums[i] && !decreasing && decreasingCount == 0) {
                 result = true;
-                increasing = nums[i - 1] != nums[i];
-            } else if (nums[i - 1] >= nums[i] && !increasing) {
+                if (nums[i - 1] != nums[i]) {
+                    increasingCount++;
+                    increasing = true;
+                }
+
+            } else if (nums[i - 1] >= nums[i] && !increasing && increasingCount == 0) {
                 result = true;
-                decreasing = nums[i - 1] != nums[i];
+                if (nums[i - 1] != nums[i]) {
+                    decreasingCount++;
+                    decreasing = true;
+                }
             } else {
                 return false;
             }
         }
         return result;
     }
+
+    
 }
