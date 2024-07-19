@@ -28,4 +28,19 @@ public class CountOddNumbers {
         return (high - low) / 2 + count;
     }
 
+    // Brute Force
+    public int countOdds2(int low, int high) {
+        int oddCount = 0;
+        int counter = low % 2 == 0 ? 1 : 2;
+        while (low <= high) {
+            if (low % 2 != 0) {
+                oddCount++;
+                low += counter;
+            } else {
+                low++;
+                counter++;
+            }
+        }
+        return oddCount;
+    }
 }
