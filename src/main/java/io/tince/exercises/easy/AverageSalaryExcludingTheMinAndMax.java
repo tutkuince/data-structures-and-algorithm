@@ -1,5 +1,7 @@
 package io.tince.exercises.easy;
 
+import java.util.Arrays;
+
 /**
  * Average Salary Excluding the Minimum and Maximum Salary
  * <p>
@@ -42,5 +44,16 @@ public class AverageSalaryExcludingTheMinAndMax {
             }
         }
         return result / counter;
+    }
+
+    // Solution - 2
+    public double average2(int[] salary) {
+        Arrays.sort(salary);
+        double sum = 0;
+        for (int i = 1; i < salary.length - 1; i++) {
+            sum += (double) salary[i];
+        }
+        sum = (double) sum / (salary.length - 2);
+        return sum;
     }
 }
