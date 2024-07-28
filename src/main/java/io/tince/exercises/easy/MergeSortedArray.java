@@ -39,7 +39,7 @@ public class MergeSortedArray {
         int[] nums2 = new int[]{2, 5, 6};
         int[] nums11 = new int[]{};
         int[] nums22 = new int[]{1};
-        new MergeSortedArray().merge(nums1, 3, nums2, 3);
+        new MergeSortedArray().merge3(nums1, 3, nums2, 3);
     }
 
     // Brute Force
@@ -51,5 +51,16 @@ public class MergeSortedArray {
             }
         }
         Arrays.sort(nums1);
+    }
+
+    // Optimal Solution
+    public void merge3(int[] nums1, int m, int[] nums2, int n) {
+        int length = m + n - 1;
+        int nums1Length = m - 1;
+        int nums2Length = n - 1;
+        while (nums2Length >= 0) {
+            if (nums1Length >= 0 && nums2[nums2Length] > nums1[nums1Length]) nums1[length--] = nums2[nums2Length--];
+            else nums1[length--] = nums1[nums1Length--];
+        }
     }
 }
