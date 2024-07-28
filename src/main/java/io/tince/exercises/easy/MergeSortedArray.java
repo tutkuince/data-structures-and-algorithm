@@ -53,14 +53,30 @@ public class MergeSortedArray {
         Arrays.sort(nums1);
     }
 
-    // Optimal Solution
+    // {1, 2, 3, 0, 0, 0};
+    // {2, 5, 6};
     public void merge3(int[] nums1, int m, int[] nums2, int n) {
         int length = m + n - 1;
         int nums1Length = m - 1;
         int nums2Length = n - 1;
         while (nums2Length >= 0) {
-            if (nums1Length >= 0 && nums2[nums2Length] > nums1[nums1Length]) nums1[length--] = nums2[nums2Length--];
-            else nums1[length--] = nums1[nums1Length--];
+            if (nums1Length >= 0 && nums1[nums1Length] > nums2[nums2Length]) nums1[length--] = nums1[nums1Length--];
+            else nums1[length--] = nums2[nums2Length--];
+        }
+    }
+
+    // Optimal Solution
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1;
+        int j = n - 1;
+        int k = m + n - 1;
+
+        while (j >= 0) {
+            if (i >= 0 && nums1[i] > nums2[j]) {
+                nums1[k--] = nums1[i--];
+            } else {
+                nums1[k--] = nums2[j--];
+            }
         }
     }
 }
