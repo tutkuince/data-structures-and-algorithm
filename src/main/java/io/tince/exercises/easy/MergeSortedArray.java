@@ -1,5 +1,7 @@
 package io.tince.exercises.easy;
 
+import java.util.Arrays;
+
 /**
  * Merge Sorted Array
  * <p>
@@ -37,10 +39,17 @@ public class MergeSortedArray {
         int[] nums2 = new int[]{2, 5, 6};
         int[] nums11 = new int[]{};
         int[] nums22 = new int[]{1};
-        new MergeSortedArray().merge(nums1, 0, nums2, 1);
+        new MergeSortedArray().merge(nums1, 3, nums2, 3);
     }
 
+    // Brute Force
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        //TODO
+        int nums2Counter = 0;
+        for (int i = 0; i < nums1.length; i++) {
+            if (n != nums2Counter && nums1[i] == 0) {
+                nums1[i] = nums2[nums2Counter++];
+            }
+        }
+        Arrays.sort(nums1);
     }
 }
