@@ -1,4 +1,4 @@
-package io.tince.exercises.easy.one.week.preparation.kit.day._01;
+package io.tince.exercises.easy;
 
 import java.util.Arrays;
 import java.util.List;
