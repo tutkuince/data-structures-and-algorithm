@@ -25,25 +25,22 @@ public class ReverseVowelsOfAString {
     }
     public String reverseVowels(String s) {
         List<Character> vowelCharacters = Arrays.asList('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U');
-        Map<Integer, Character> indexCharacterMap = new HashMap<>();
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            result.append(s.charAt(i));
-            if (vowelCharacters.contains(s.charAt(i))) {
-                indexCharacterMap.put(i, s.charAt(i));
+        char[] inputArray = s.toCharArray();
+        int start = 0;
+        int end = inputArray.length - 1;
+        while (start < end) {
+            if (!vowelCharacters.contains(inputArray[start])) {
+                start++;
+            } else if (!vowelCharacters.contains(inputArray[end])) {
+                end--;
+            } else {
+                char temp = inputArray[start];
+                inputArray[start] = inputArray[end];
+                inputArray[end] = temp;
+                start++;
+                end--;
             }
         }
-        int counter = 0;
-        for (int i = 0; i < result.length() / 2; i++) {
-            if (vowelCharacters.contains(result.charAt(i))) {
-                char temp = result.charAt(i);
-                Integer index = Collections.max(indexCharacterMap.entrySet(), Map.Entry.comparingByKey()).getKey();
-                result.setCharAt(i, indexCharacterMap.get(index));
-                result.setCharAt(index, temp);
-                indexCharacterMap.remove(index);
-            }
-        }
-        // TODO
-        return result.toString();
+        return String.valueOf(inputArray);
     }
 }
