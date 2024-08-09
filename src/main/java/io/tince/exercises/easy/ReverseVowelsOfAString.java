@@ -24,7 +24,7 @@ public class ReverseVowelsOfAString {
         System.out.println(new ReverseVowelsOfAString().reverseVowels("aA"));
     }
     public String reverseVowels(String s) {
-        List<Character> vowelCharacters = Arrays.asList('a', 'e', 'i', 'o', 'u');
+        List<Character> vowelCharacters = Arrays.asList('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U');
         Map<Integer, Character> indexCharacterMap = new HashMap<>();
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
