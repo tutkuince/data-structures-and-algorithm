@@ -19,11 +19,31 @@ package io.tince.exercises.easy;
 public class CanPlaceFlowers {
     public static void main(String[] args) {
         int[] flowerbed = new int[]{0, 0, 0, 1};
-        System.out.println(new CanPlaceFlowers().canPlaceFlowers(flowerbed, 1));
+        int[] flowerbed2 = new int[]{1, 0, 0, 0, 1};
+        int[] flowerbed3 = new int[]{1, 0, 0, 0, 0, 1};
+        int[] flowerbed4 = new int[]{0, 0, 1, 0, 1};
+        int[] flowerbed5 = new int[]{0, 0, 0, 0, 1};
+        System.out.println(new CanPlaceFlowers().canPlaceFlowers(flowerbed5, 2));
     }
 
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         // TODO
-        return false;
+        int count = 0;
+        for (int i = 0; i < flowerbed.length; i++) {
+            // Check if the current plot is empty.
+            if (flowerbed[i] == 0) {
+                // Check if the left and right plots are empty.
+                boolean emptyLeftPlot = (i == 0) || (flowerbed[i - 1] == 0);
+                boolean emptyRightPlot = (i == flowerbed.length - 1) || (flowerbed[i + 1] == 0);
+
+                // If both plots are empty, we can plant a flower here.
+                if (emptyLeftPlot && emptyRightPlot) {
+                    flowerbed[i] = 1;
+                    count++;
+                    if (count == n) return true;
+                }
+            }
+        }
+        return count >= n;
     }
 }
