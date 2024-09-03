@@ -30,7 +30,7 @@ public class RemoveElement {
     public static void main(String[] args) {
         int[] nums1 = new int[]{3, 2, 2, 3};
         int[] nums2 = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
-        System.out.println(new RemoveElement().removeElement(nums2, 2));
+        System.out.println(new RemoveElement().removeElement2(nums2, 2));
     }
 
     public int removeElement(int[] nums, int val) {
