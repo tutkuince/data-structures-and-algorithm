@@ -1,5 +1,7 @@
 package io.tince.exercises.easy;
 
+import java.util.Arrays;
+
 /**
  * Remove Element
  * <p>
@@ -25,8 +27,28 @@ package io.tince.exercises.easy;
  * It does not matter what you leave beyond the returned k (hence they are underscores).
  */
 public class RemoveElement {
+    public static void main(String[] args) {
+        int[] nums1 = new int[]{3, 2, 2, 3};
+        int[] nums2 = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
+        System.out.println(new RemoveElement().removeElement(nums2, 2));
+    }
+
     public int removeElement(int[] nums, int val) {
-        // TODO - Solution
-        return 0;
+        Arrays.sort(nums);
+        int counter = 0;
+        int result = 0;
+        for (int i = 0; i < nums.length - counter; i++) {
+            if (nums[i] == val) {
+                counter++;
+                int temp = nums[nums.length - counter] == val ? Integer.MAX_VALUE : nums[nums.length - counter];
+                nums[nums.length - counter] = Integer.MAX_VALUE;
+                nums[i] = temp;
+
+            }
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != Integer.MAX_VALUE) result++;
+        }
+        return result;
     }
 }
