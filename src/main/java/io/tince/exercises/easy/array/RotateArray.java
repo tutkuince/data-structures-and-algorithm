@@ -33,9 +33,9 @@ public class RotateArray {
     // 1, 2, 3
     public static void rotate(int[] nums, int k) {
         k = k % nums.length;
-        reverse(nums, 0, nums.length - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, nums.length - 1);
+        reverse(nums, 0, nums.length - 1);  // After reversing all numbers
+        reverse(nums, 0, k - 1);            // After reversing first k numbers
+        reverse(nums, k, nums.length - 1);       // After revering last n-k numbers
     }
 
     public static void reverse(int[] nums, int start, int end) {
