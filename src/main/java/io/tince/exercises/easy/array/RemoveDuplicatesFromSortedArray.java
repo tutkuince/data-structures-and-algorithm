@@ -29,7 +29,7 @@ public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
         int[] numbers1 = {1, 1, 2};                         // [1, 2, 2]
         int[] numbers2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};    // [0, 1, 2, 3, 4, 2, 2, 3, 3, 4]
-        System.out.println(removeDuplicates(numbers1));
+        System.out.println(removeDuplicates2(numbers1));
     }
 
     // Solution - 1
@@ -44,5 +44,17 @@ public class RemoveDuplicatesFromSortedArray {
             nums[i] = uniqueNumbers.get(i);
         }
         return uniqueNumbers.size();
+    }
+
+    // Solution - 2
+    public static int removeDuplicates2(int[] nums) {
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                nums[i + 1] = nums[j];
+                i++;
+            }
+        }
+        return i + 1;
     }
 }
