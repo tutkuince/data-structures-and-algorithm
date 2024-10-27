@@ -1,5 +1,8 @@
 package io.tince.exercises.easy.array;
 
+import java.math.BigInteger;
+import java.util.Arrays;
+
 /**
  * Plus One
  * <p>
@@ -27,9 +30,61 @@ package io.tince.exercises.easy.array;
  * Explanation: The array represents the integer 9.
  * Incrementing by one gives 9 + 1 = 10.
  * Thus, the result should be [1,0].
+ * <p>
+ * Constraints:
+ * 1 <= digits.length <= 100
+ * 0 <= digits[i] <= 9
+ * digits does not contain any leading 0's.
  */
 public class PlusOne {
-    public int[] plusOne(int[] digits) {
-        return new int[]{};
+    public static void main(String[] args) {
+        int[] digits = {8, 9, 9};
+        System.out.println(Arrays.toString(plusOne3(digits)));
+    }
+
+    public static int[] plusOne(int[] digits) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < digits.length; i++) {
+            result.append(digits[i]);
+        }
+        BigInteger i = new BigInteger(result.toString());
+        i = i.add(new BigInteger("1"));
+        String string = i.toString();
+        digits = new int[string.length()];
+        for (int j = 0; j < digits.length; j++) {
+            digits[j] = Character.getNumericValue(string.charAt(j));
+        }
+        return digits;
+    }
+
+    public static int[] plusOne3(int[] digits) {
+        for (int i = digits.length - 1; i >= 0; i--) {
+            if (digits[i] != 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+        int[] newDig = new int[digits.length + 1];
+        newDig[0] = 1;
+        return newDig;
+    }
+
+    public static int[] plusOne2(int[] digits) {
+        long calculationResult = 0;
+        long divisor = 1;
+        for (int i = digits.length - 1; 0 <= i; i--) {
+            int digit = digits[i];
+            calculationResult += (digit * divisor);
+            divisor *= 10;
+        }
+        calculationResult++;
+        String strResult = String.valueOf(calculationResult);
+        digits = new int[strResult.length()];
+        for (int i = 0; i < strResult.length(); i++) {
+            char c = strResult.charAt(i);
+            digits[i] = Character.getNumericValue(c);
+        }
+        return digits;
     }
 }
