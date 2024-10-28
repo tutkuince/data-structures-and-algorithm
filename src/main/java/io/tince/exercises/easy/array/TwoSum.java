@@ -1,5 +1,9 @@
 package io.tince.exercises.easy.array;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Two Sum
  * <p>
@@ -21,7 +25,21 @@ package io.tince.exercises.easy.array;
  * Output: [0,1]
  */
 public class TwoSum {
-    public int[] twoSum(int[] nums, int target) {
+    public static void main(String[] args) {
+        int[] nums = new int[]{2, 7, 11, 15};
+        System.out.println(Arrays.toString(twoSum(nums, 9)));
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> numberIndexMap = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            int requiredValue = target - nums[i];
+            if (numberIndexMap.containsKey(requiredValue)) {
+                return new int[]{numberIndexMap.get(requiredValue), i};
+            }
+            numberIndexMap.put(nums[i], i);
+        }
         return new int[]{};
     }
 }
