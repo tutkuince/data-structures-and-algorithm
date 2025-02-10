@@ -21,7 +21,7 @@ public class TwoNumberSum {
         int targetSum = 10;
         // Sample Output
         // [-1, 11] // the numbers could be in reverse order
-        System.out.println(Arrays.toString(twoNumberSum(array, targetSum)));
+        System.out.println(Arrays.toString(twoNumberSum2(array, targetSum)));
     }
 
     // O(nlog(n)) time | O(1) space
@@ -44,34 +44,23 @@ public class TwoNumberSum {
         return new int[0];
     }
 
-    // O(n) time | O(n) space
-    /*public static int[] twoNumberSum(int[] array, int targetSum) {
+    public static int[] twoNumberSum2(int[] array, int targetSum) {
         // Write your code here.
-        Set<Integer> numbersSet = new HashSet<>();
-        for (int num :array) {
+        // [ -4, -1, 1, 3, 5, 6, 8, 11 ]
+        // [ 3, 5, -4, 8, 11, 1, -1, 6 ], targetSum = 10
+        Set<Integer> numbers = new HashSet<>();
+        int[] result = new int[2];
+        for (int num : array) {
             int potentialMatch = targetSum - num;
-            if (numbersSet.contains(potentialMatch)) {
-                return new int[]{potentialMatch, num};
-            } else {
-                numbersSet.add(num);
+            if (numbers.contains(potentialMatch)) {
+                result = new int[]{potentialMatch, num};
+                Arrays.sort(result);
+                return result;
             }
+            numbers.add(num);
         }
         return new int[0];
-    }*/
+    }
 
-    // O(n^2) time | O(1) space
-    /*public static int[] twoNumberSum(int[] array, int targetSum) {
-        // Write your code here.
-        int[] result = {};
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] + array[j] == targetSum) {
-                    result = new int[]{array[i], array[j]};
-                    Arrays.sort(result);
-                    return result;
-                }
-            }
-        }
-        return result;
-    }*/
+
 }
