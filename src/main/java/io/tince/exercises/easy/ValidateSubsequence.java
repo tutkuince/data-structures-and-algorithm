@@ -1,7 +1,9 @@
 package io.tince.exercises.easy;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 // Validate Subsequence
 // Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
@@ -31,5 +33,22 @@ public class ValidateSubsequence {
             }
         }
         return false;
+    }
+
+
+    public static boolean isValidSubsequence2(List<Integer> array, List<Integer> sequence) {
+        // Write your code here.
+        // TODO
+        // array [1, 2, 3, 4], sequence [1, 3, 4]
+        int order = 0;
+        for (Integer number: array) {
+            if (order == sequence.size()) {
+                break;
+            }
+            if (number.equals(sequence.get(order))) {
+                order++;
+            }
+        }
+        return order == sequence.size();
     }
 }
