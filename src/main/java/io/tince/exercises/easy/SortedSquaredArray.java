@@ -9,9 +9,10 @@ public class SortedSquaredArray {
 
     public static void main(String[] args) {
         // Sample Input
-        int[] array = new int[]{1, 2, 3, 5, 6, 8, 9};
+        int[] array = new int[]{-7, -3, 1, 9, 22, 30};
         // Sample Output
         // [1, 4, 9, 25, 36, 64, 81];
+        System.out.println(Arrays.toString(sortedSquaredArray2(array)));
     }
 
     // O(nlogn) time | O(n) space
@@ -23,5 +24,24 @@ public class SortedSquaredArray {
         }
         Arrays.sort(result);
         return result;
+    }
+
+    public static int[] sortedSquaredArray2(int[] array) {
+        // Write your code here.
+        int[] sortedSquares = new int[array.length];
+        int smallerValueIdx = 0;
+        int largerValueIdx = array.length - 1;
+        for (int idx = array.length - 1; idx >= 0; idx--) {
+            int smallerValue = array[smallerValueIdx];
+            int largerValue = array[largerValueIdx];
+            if (Math.abs(smallerValue) > Math.abs(largerValue)) {
+                sortedSquares[idx] = smallerValue * smallerValue;
+                smallerValueIdx++;
+            } else {
+                sortedSquares[idx] = largerValue * largerValue;
+                largerValueIdx--;
+            }
+        }
+        return sortedSquares;
     }
 }
