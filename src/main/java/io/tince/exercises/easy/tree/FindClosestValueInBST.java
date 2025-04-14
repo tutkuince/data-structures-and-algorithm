@@ -4,16 +4,15 @@ import java.util.Objects;
 
 /**
  * Find Closest Value in BST
- *
+ * <p>
  * Write a function that takes in a Binary Search Tree (BST) and a target integer value and returns the closest value to that target value contained in the BST
- *
+ * <p>
  * You can assume that there will only be one closest value.
- *
+ * <p>
  * Each BST node has an integer value, a left child node, and a right child node.
  * A node is said to be a valid BST node if and only if it satisfies the BST property: its value is strictly greater that the values of every node to its left;
  * its value is less than or equal to the values of every node to its right; and its children nodes are either valid BTS nodes themselves or Node / null.
- *
- * */
+ */
 public class FindClosestValueInBST {
 
     public static void main(String[] args) {
@@ -44,7 +43,7 @@ public class FindClosestValueInBST {
 
             if (target > tree.value) {
                 tree = tree.right;
-            } else if (target < tree.value){
+            } else if (target < tree.value) {
                 tree = tree.left;
             } else {
                 return tree.value;
