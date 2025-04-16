@@ -19,8 +19,67 @@ package io.tince.exercises.easy.string;
  */
 public class RunLengthEncoding {
 
-    public String runLengthEncoding(String string) {
+    public static void main(String[] args) {
+         System.out.println(runLengthEncoding2("AAAAAAAAAAAA"));
+         System.out.println(runLengthEncoding2("AAAAAAAAAAAAABBCCCCDD"));
+        System.out.println(runLengthEncoding2("aA"));
+        System.out.println(runLengthEncoding2(" "));
+    }
+
+    public static String runLengthEncoding(String string) {
         // Write your code here.
-        return "";
+        StringBuilder builder = new StringBuilder();
+        char firstLetter = string.charAt(0);
+        if (string.length() == 1) {
+            builder.append(string.length());
+            builder.append(firstLetter);
+        }
+        int counter = 0;
+        for (int i = 1; i < string.length(); i++) {
+            counter++;
+            if (counter % 9 == 0 && firstLetter == string.charAt(i)) {
+                builder.append(9);
+                builder.append(string.charAt(i));
+                counter = 0;
+            }
+
+            if (firstLetter != string.charAt(i)) {
+                builder.append(counter);
+                builder.append(string.charAt(i - 1));
+                firstLetter = string.charAt(i);
+                counter = 0;
+            }
+
+            if (i == string.length() - 1) {
+                counter++;
+                builder.append(counter);
+                builder.append(firstLetter);
+            }
+        }
+        return builder.toString();
+    }
+
+    public static String runLengthEncoding2(String string) {
+        // Write your code here.
+        StringBuilder builder = new StringBuilder();
+        char currentChar = string.charAt(0);
+        int count = 0;
+
+        for (char c : string.toCharArray()) {
+            if (count == 9 || currentChar != c) {
+                builder.append(count);
+                builder.append(currentChar);
+                currentChar = c;
+                count = 0;
+            }
+            count++;
+        }
+
+        if (count != 0) {
+            builder.append(count);
+            builder.append(currentChar);
+        }
+
+        return builder.toString();
     }
 }
