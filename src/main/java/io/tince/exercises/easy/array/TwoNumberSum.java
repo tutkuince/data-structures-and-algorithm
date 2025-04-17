@@ -24,6 +24,7 @@ import java.util.Set;
 public class TwoNumberSum {
 
     public static int[] twoNumberSum(int[] array, int targetSum) {
+
         // Write your code here.
         Set<Integer> numbers = new HashSet<>();
         int[] result = new int[2];
