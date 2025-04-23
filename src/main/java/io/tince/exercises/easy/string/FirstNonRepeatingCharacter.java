@@ -20,6 +20,18 @@ public class FirstNonRepeatingCharacter {
 
     public static int firstNonRepeatingCharacter(String string) {
         // Write your code here.
+        Map<Character, Integer> characterCountMap = new LinkedHashMap<>();
+        for (char c : string.toCharArray()) {
+            characterCountMap.put(c, characterCountMap.getOrDefault(c, 0) + 1);
+        }
+
+        int counter = 0;
+        for (char c : string.toCharArray()) {
+            if (characterCountMap.get(c) == 1) {
+                return counter;
+            }
+            counter++;
+        }
         return -1;
     }
 }
