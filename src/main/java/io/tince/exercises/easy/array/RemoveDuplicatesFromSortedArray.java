@@ -1,10 +1,9 @@
 package io.tince.exercises.easy.array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
+ * Remove Duplicates from Sorted Array
  * Given an integer array "nums" sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
  * The relative order of the elements should be kept the same. The return the number of unique elements in "nums".
  * <p>
@@ -29,7 +28,7 @@ public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
         int[] numbers1 = {1, 1, 2};                         // [1, 2, 2]
         int[] numbers2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};    // [0, 1, 2, 3, 4, 2, 2, 3, 3, 4]
-        System.out.println(removeDuplicates2(numbers1));
+        System.out.println(removeDuplicates3(numbers1));
     }
 
     // Solution - 1
@@ -56,5 +55,18 @@ public class RemoveDuplicatesFromSortedArray {
             }
         }
         return i + 1;
+    }
+
+    // Solution - 3
+    public static int removeDuplicates3(int[] nums) {
+        Set<Integer> uniqueNumbers = new LinkedHashSet<>();
+        int index = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            if (uniqueNumbers.add(num)) {
+                nums[index++] = num;
+            }
+        }
+        return uniqueNumbers.size();
     }
 }
