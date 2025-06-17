@@ -1,5 +1,8 @@
 package io.tince.exercises.medium.strings;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Longest Substring Without Repeating Characters
  * <p>
@@ -30,7 +33,18 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
 
     public static int lengthOfLongestSubstring(String s) {
-        
-        return 0;
+        Set<Character> seen = new HashSet<>();
+        int left = 0, maxLength = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+            while (seen.contains(s.charAt(right))) {
+                seen.remove(s.charAt(left));
+                left++;
+            }
+            seen.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
+        }
+
+        return maxLength;
     }
 }
