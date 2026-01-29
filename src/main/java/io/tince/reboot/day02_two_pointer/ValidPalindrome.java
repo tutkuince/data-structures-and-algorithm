@@ -1,4 +1,4 @@
-package io.tince.reboot.day02;
+package io.tince.reboot.day02_two_pointer;
 
 /**
  * Valid Palindrome
